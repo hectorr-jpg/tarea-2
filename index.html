@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>🐇 Problema de los Conejos | Fibonacci + Primos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+  <header class="hero">
+    <h1>🐇 Problema de los Conejos</h1>
+    <p class="subtitle">Crecimiento poblacional · Fibonacci · Validación con números primos</p>
+    <p class="student">Estudiante: Programador Junior · Programación Web 1 - 2026</p>
+  </header>
+
+  <section class="contexto card">
+    <h2>📖 Contexto del problema real</h2>
+    <p>En una granja ecológica, la reproducción de conejos sigue el modelo matemático de la <strong>sucesión de Fibonacci</strong>: cada mes, el número de parejas nuevas es la suma de los dos meses anteriores. Esto permite predecir la población futura para gestionar alimento, espacio y recursos. El desafío consiste en calcular cuántos conejos habrá tras cierto número de días (o meses), un problema real en biología y planificación agrícola.</p>
+  </section>
+
+  <section class="algoritmo card">
+    <h2>🧠 Explicación del algoritmo</h2>
+    <p><strong>🔢 Sucesión de Fibonacci:</strong> F(1)=1, F(2)=1, y para n≥3, F(n)=F(n-1)+F(n-2). En nuestro caso, el día "n" representa el n-ésimo término de Fibonacci, que equivale al número de <strong>parejas de conejos</strong>. Para obtener el total de individuos multiplicamos por 2.<br>
+    <strong>🔐 Números primos:</strong> Un número primo es aquel mayor que 1 y divisible únicamente entre 1 y sí mismo. Usamos esta propiedad como "contraseña matemática": solo ingresando un número primo se desbloquea el simulador de conejos, enseñando la importancia de los primos en seguridad y acceso.</p>
+  </section>
+
+  <section class="password-section card" id="passwordSection">
+    <h2>🔐 Acceso con número primo</h2>
+    <p><strong>Pista:</strong> la contraseña debe ser un <strong>número primo</strong> (ej: 2, 3, 5, 7, 11, 13, 17...).</p>
+    <form id="passwordForm">
+      <div class="form-group">
+        <label for="primePass">Ingresa la contraseña (número entero positivo):</label>
+        <input type="number" id="primePass" placeholder="Ej: 13, 29, 7" required>
+      </div>
+      <button type="submit" class="btn primary">🔓 Verificar y desbloquear</button>
+    </form>
+    <div id="passwordMessage" class="message"></div>
+  </section>
+
+  <div id="rabbitProblemSection" style="display: none;">
+    <section class="fibonacci-card card">
+      <h2>🐰 Problema de los conejos (Fibonacci)</h2>
+      <p>Ingresa la cantidad de <strong>días / meses</strong> que han pasado. Utilizando la sucesión de Fibonacci, conocerás cuántos conejos habitan en la granja ese día.</p>
+      <form id="fibonacciForm">
+        <div class="form-group">
+          <label for="nDias">¿Cuántos días viste a los conejos? (n-simo término):</label>
+          <input type="number" id="nDias" placeholder="Ejemplo: 6, 10, 15" min="1" required>
+        </div>
+        <button type="submit" class="btn secondary">📊 Calcular población</button>
+      </form>
+      <div id="fibonacciResult" class="result-box">
+      </div>
+    </section>
+  </div>
+
+  <section class="conclusion card">
+    <h2>🔢 Conclusión: ¿Cómo ayuda la matemática al problema?</h2>
+    <p>La <strong>sucesión de Fibonacci</strong> modela el crecimiento biológico en condiciones ideales, ayudando a los biólogos y agricultores a prever poblaciones futuras. Los <strong>números primos</strong> son la base de la criptografía moderna y en este proyecto actúan como un "candado matemático", mostrando su utilidad en la vida real. Así, combinamos dos conceptos fundamentales para resolver un problema práctico: la gestión de una conejera.</p>
+  </section>
+
+  <footer class="enlaces card">
+    <h3>🔗 Recursos del proyecto</h3>
+    <p><a href="#" id="repoLink" target="_blank">📁 Repositorio Git (GitHub)</a> — <a href="#" id="liveLink" target="_blank">🌐 Página publicada (Netlify / GitHub Pages)</a></p>
+    <p class="small">* Enlaces de ejemplo. Sustituir por los reales al desplegar.</p>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
