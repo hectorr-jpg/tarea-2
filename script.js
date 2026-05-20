@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const repoLink = document.getElementById('repoLink');
   const liveLink = document.getElementById('liveLink');
-  repoLink.href = 'https://github.com/tuusuario/problema-conejos';
+  repoLink.href = 'https://github.com/hectorr-jpg/tarea-2.git';
   liveLink.href = 'https://tusitio.github.io/problema-conejos';
   
   function esPrimo(num) {
