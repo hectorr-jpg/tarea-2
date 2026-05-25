@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  padding: 1.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-left: 5px solid currentColor;
+  padding-left: 0.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero {
+  text-align: center;
+  border-radius: 2rem;
+}
+
+.subtitle {
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.student {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: currentColor;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn.primary {
+  background-color: #2c7da0;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #e9c46a;
+  color: #2d3e50;
+}
+
+.message {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border-left: 6px solid #28a745;
+}
+
+.message.warning {
+  background: #fff3cd;
+  color: #856404;
+  border-left: 6px solid #ffc107;
+}
+
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border-left: 6px solid #dc3545;
+}
+
+.result-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 1rem;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.enlaces a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.small {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* Layout dos columnas en escritorio */
+.two-columns {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.two-columns > section {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Medidor de fuerza (barra progresiva) */
+.strength-meter {
+  background-color: #e9ecef;
+  border-radius: 2rem;
+  height: 10px;
+  margin: 1rem 0 0.5rem;
+  overflow: hidden;
+}
+
+.strength-bar {
+  width: 0%;
+  height: 100%;
+  transition: width 0.2s ease, background-color 0.2s;
+  border-radius: 2rem;
+}
+
+.criteria-list {
+  margin-top: 1rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.criteria-list h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.criteria-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.criteria-list li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive: apilar en móvil */
+@media (max-width: 767px) {
+  body {
+    background: #e6f0fa;
+    color: #1e3a5f;
+  }
+  .card {
+    background: #ffffffdd;
+    backdrop-filter: blur(2px);
+    border: 1px solid #b8d0e7;
+  }
+  .btn.primary {
+    background-color: #3a86ff;
+  }
+  .btn.secondary {
+    background-color: #4c9f70;
+    color: white;
+  }
+  h2 {
+    border-left-color: #2c7da0;
+  }
+  .two-columns {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .two-columns > section {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background: #fef9e6;
+    color: #7d5d2e;
+  }
+  .card {
+    background: #fffef7;
+    border: 1px solid #f3e1b3;
+  }
+  .btn.primary {
+    background-color: #e9b35f;
+    color: #3b2a1f;
+  }
+  .btn.secondary {
+    background-color: #d4a373;
+    color: white;
+  }
+  h2 {
+    border-left-color: #e9b35f;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: #fde9e9;
+    color: #8b3c3c;
+  }
+  .card {
+    background: #fff6f0;
+    border: 1px solid #f5cfcf;
+  }
+  .btn.primary {
+    background-color: #d96846;
+    color: white;
+  }
+  .btn.secondary {
+    background-color: #b95f5f;
+    color: white;
+  }
+  h2 {
+    border-left-color: #d96846;
+  }
+}

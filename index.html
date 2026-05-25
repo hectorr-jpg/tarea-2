@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>🐇 Conejos Fibonacci + Verificador de Contraseña Segura (con primo obligatorio)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-container">
+  <header class="hero">
+    <h1>🐇 Problema de los Conejos</h1>
+    <p class="subtitle">Crecimiento poblacional · Fibonacci · Seguridad con números primos</p>
+    <p class="student">Estudiante: Programador Junior · Programación Web 1 - 2026</p>
+  </header>
+
+  <section class="contexto card">
+    <h2>📖 Contexto del problema real</h2>
+    <p>En una granja ecológica, la reproducción de conejos sigue el modelo matemático de la <strong>sucesión de Fibonacci</strong>: cada mes, el número de parejas nuevas es la suma de los dos meses anteriores. Esto permite predecir la población futura para gestionar alimento, espacio y recursos. El desafío consiste en calcular cuántos conejos habrá tras cierto número de días (o meses), un problema real en biología y planificación agrícola.</p>
+  </section>
+
+  <section class="algoritmo card">
+    <h2>🧠 Explicación del algoritmo</h2>
+    <p><strong>🔢 Sucesión de Fibonacci:</strong> F(1)=1, F(2)=1, y para n≥3, F(n)=F(n-1)+F(n-2). En nuestro caso, el día "n" representa el n-ésimo término de Fibonacci, que equivale al número de <strong>parejas de conejos</strong>. Para obtener el total de individuos multiplicamos por 2.<br>
+    <strong>🔐 Seguridad con números primos:</strong> Para que una contraseña sea considerada segura, debe contener <strong>obligatoriamente un número primo</strong> (como 2, 3, 5, 7, 11, 13...). Los números primos son la base de la criptografía moderna, y ahora los usamos para fortalecer tus claves.</p>
+  </section>
+
+  <!-- Dos columnas flexibles en pantallas grandes -->
+  <div class="two-columns">
+    <!-- COLUMNA IZQUIERDA: FIBONACCI (CONEJOS) -->
+    <section class="fibonacci-card card">
+      <h2>🐰 Problema de los conejos (Fibonacci)</h2>
+      <p>Ingresa la cantidad de <strong>días / meses</strong> que han pasado. Utilizando la sucesión de Fibonacci, conocerás cuántos conejos habitan en la granja ese día.</p>
+      <form id="fibonacciForm">
+        <div class="form-group">
+          <label for="nDias">¿Cuántos días viste a los conejos? (n-simo término):</label>
+          <input type="number" id="nDias" placeholder="Ejemplo: 6, 10, 15" min="1" required>
+        </div>
+        <button type="submit" class="btn secondary">📊 Calcular población</button>
+      </form>
+      <div id="fibonacciResult" class="result-box"></div>
+    </section>
+
+    <!-- COLUMNA DERECHA: VERIFICADOR DE CONTRASEÑA SEGURA (CON PRIMO OBLIGATORIO) -->
+    <section class="password-strength-card card">
+      <h2>🔐 Verificador de contraseña segura</h2>
+      <p>Escribe una contraseña. <strong>Debe contener al menos un número primo</strong> (2,3,5,7,11,13...). Te mostraremos qué tan segura es.</p>
+      <form id="passwordStrengthForm">
+        <div class="form-group">
+          <label for="passwordInput">Contraseña a evaluar:</label>
+          <input type="password" id="passwordInput" placeholder="Ej: MiClave13Segura$" autocomplete="off">
+          <small>🔍 La evaluación se actualiza mientras escribes</small>
+        </div>
+      </form>
+      <div class="strength-meter">
+        <div class="strength-bar" id="strengthBar"></div>
+      </div>
+      <div id="passwordStrengthMessage" class="message"></div>
+      <div id="passwordCriteriaList" class="criteria-list">
+        <h4>✅ Criterios de seguridad (el primo es OBLIGATORIO):</h4>
+        <ul>
+          <li id="criteriaLength">❌ Al menos 8 caracteres</li>
+          <li id="criteriaLower">❌ Al menos una minúscula</li>
+          <li id="criteriaUpper">❌ Al menos una mayúscula</li>
+          <li id="criteriaDigit">❌ Al menos un número</li>
+          <li id="criteriaSpecial">❌ Al menos un carácter especial (!@#$%^&*)</li>
+          <li id="criteriaPrime">❌ Debe contener un número primo (ej: 2,3,5,7,11,13...)</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <section class="conclusion card">
+    <h2>🔢 Conclusión: ¿Cómo ayuda la matemática al problema?</h2>
+    <p>La <strong>sucesión de Fibonacci</strong> modela el crecimiento biológico en condiciones ideales, ayudando a los biólogos y agricultores a prever poblaciones futuras. Los <strong>números primos</strong> son esenciales en ciberseguridad; aquí los incorporamos como requisito infaltable para una contraseña robusta. Así combinamos dos conceptos matemáticos clave en una herramienta interactiva.</p>
+  </section>
+
+  <footer class="enlaces card">
+    <h3>🔗 Recursos del proyecto</h3>
+    <p><a href="#" id="repoLink" target="_blank">📁 Repositorio Git (GitHub)</a></p>
+  </footer>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
