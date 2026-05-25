@@ -171,6 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Enlaces del footer
   const repoLink = document.getElementById('repoLink');
   const liveLink = document.getElementById('liveLink');
-  repoLink.href = 'https://github.com/tuusuario/problema-conejos-seguridad';
+  repoLink.href = 'https://github.com/hectorr-jpg/tarea-2.git';
   liveLink.href = 'https://tusitio.github.io/problema-conejos-seguridad';
 });
